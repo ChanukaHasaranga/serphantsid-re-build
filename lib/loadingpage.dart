@@ -2,7 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
-import 'package:serphantsid/spashscreen1.dart';
+import 'package:serphantsid/onboardscreen.dart';
+import 'package:serphantsid/spashscreen.dart/spashscreen1.dart';
 
 class loadingpage extends StatefulWidget {
   const loadingpage({super.key});
@@ -29,7 +30,7 @@ double percent = 0.0;
         } else {
           timer.cancel();
           Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-            return splashscreen1();
+            return onboardscree();
           }));
         }
       });
