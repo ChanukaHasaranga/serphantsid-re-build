@@ -38,6 +38,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   percent_indicator: ^4.2.3
   smooth_page_indicator: ^1.1.0
+  firebase_core: ^2.24.2
 
 dev_dependencies:
   flutter_test:
@@ -85,6 +86,7 @@ flutter:
     - assetss/slkarait.png
     - assetss/russellviperpng.png
     - assetss/indian.png
+    - assetss/snakemain.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

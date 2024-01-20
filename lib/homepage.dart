@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:serphantsid/details_container.dart';
 import 'package:serphantsid/homepagecontainers/hcontainers.dart';
 import 'package:serphantsid/serphantscontainers.dart/scontainers.dart';
 
@@ -62,6 +63,11 @@ Padding(
   padding: const EdgeInsets.symmetric(vertical: 20,horizontal: 11),
   child:   Text("Common Serpent IDS",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w600,fontFamily: "Poppins",color: const Color.fromARGB(255, 19, 86, 21)),),
 ),
+
+Padding(
+  padding: const EdgeInsets.symmetric(vertical: 22,horizontal: 11),
+  child:   details(),
+)
     ],
 
   ),
