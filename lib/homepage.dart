@@ -40,19 +40,28 @@ Padding(
   child:   Text("Deadliest Serpents",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w600,fontFamily: "Poppins",color: const Color.fromARGB(255, 19, 86, 21)),),
 ),
 Padding(
-  padding: const EdgeInsets.fromLTRB(11, 54, 11, 0),
+  padding: const EdgeInsets.fromLTRB(23, 0, 23, 0),
   child:   Row(
   
     mainAxisAlignment: MainAxisAlignment.spaceBetween,
   
     children: [
-      scontainers()
+      scontainers(imagepath: 'assetss/snake.png', txt: 'King Cobra',),
+      scontainers(imagepath: 'assetss/slkarait.png', txt: 'SL Krait',),
+      scontainers(imagepath: 'assetss/russellviperpng.png', txt: 'Russell’s viper',),
+      scontainers(imagepath: 'assetss/indian.png', txt: 'Indian krait',),
+
+
   
   
     ],
   
   ),
-)
+),
+Padding(
+  padding: const EdgeInsets.symmetric(vertical: 20,horizontal: 11),
+  child:   Text("Common Serpent IDS",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w600,fontFamily: "Poppins",color: const Color.fromARGB(255, 19, 86, 21)),),
+),
     ],
 
   ),

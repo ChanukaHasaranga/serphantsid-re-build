@@ -81,6 +81,10 @@ flutter:
     - assetss/camera.png
     - assetss/sort.png
     - assetss/snake.png
+    - assetss/Group.png
+    - assetss/slkarait.png
+    - assetss/russellviperpng.png
+    - assetss/indian.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
