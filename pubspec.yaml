@@ -77,6 +77,9 @@ flutter:
     - assetss/SERPENTS!D.png
     - assetss/Rectangle 26.png
     - assetss/3page.png
+    - assetss/upload.png
+    - assetss/camera.png
+    - assetss/sort.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -90,10 +93,11 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
+
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assetss/fontss/Poppins-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
