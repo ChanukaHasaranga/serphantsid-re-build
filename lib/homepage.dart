@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:serphantsid/homepagecontainers/hcontainers.dart';
+import 'package:serphantsid/serphantscontainers.dart/scontainers.dart';
 
 class homepage extends StatelessWidget {
   const homepage({super.key});
@@ -37,6 +38,20 @@ crossAxisAlignment: CrossAxisAlignment.start,
 Padding(
   padding: const EdgeInsets.symmetric(vertical: 20,horizontal: 11),
   child:   Text("Deadliest Serpents",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w600,fontFamily: "Poppins",color: const Color.fromARGB(255, 19, 86, 21)),),
+),
+Padding(
+  padding: const EdgeInsets.fromLTRB(11, 54, 11, 0),
+  child:   Row(
+  
+    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+  
+    children: [
+      scontainers()
+  
+  
+    ],
+  
+  ),
 )
     ],
 
