@@ -157,7 +157,11 @@ child: Stack(
                   variens: serphentsiddoc[index]['Uname'], 
                   feet: serphentsiddoc[index]['Lenth'], 
                   years: serphentsiddoc[index]['Born'], 
-                  imagepath:serphentsiddoc[index]['Mimage']
+                  imagepath:serphentsiddoc[index]['Mimage'], 
+                  Habitat:serphentsiddoc[index]['Habitat'],
+                   Idn:serphentsiddoc[index]["Idn"], 
+                   Toxic:serphentsiddoc[index]['Toxic'], 
+                   secondimagepath:serphentsiddoc[index]['Profilepic'],
                   
                   );
               
