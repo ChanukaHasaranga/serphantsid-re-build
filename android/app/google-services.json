@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "94987259147",
+    "firebase_url": "https://serphanid-default-rtdb.firebaseio.com",
+    "project_id": "serphanid",
+    "storage_bucket": "serphanid.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:94987259147:android:810f8b5d29ed677e82660e",
+        "android_client_info": {
+          "package_name": "com.example.serphantid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "94987259147-6kcpa0b4sal6v0t1c59smmut46igdac9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.serphantid",
+            "certificate_hash": "c409edc83fe3aa19ca308975c7b0821e3c54439b"
+          }
+        },
+        {
+          "client_id": "94987259147-arftan38e5983j3gfje3g2pa8rcmchbq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC70dHUssFSLATF7nV2OEAhDCftc-Hhf4A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "94987259147-arftan38e5983j3gfje3g2pa8rcmchbq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:94987259147:android:4e5b2734bc5cd94282660e",
+        "android_client_info": {
+          "package_name": "com.example.serphantsid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "94987259147-arftan38e5983j3gfje3g2pa8rcmchbq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC70dHUssFSLATF7nV2OEAhDCftc-Hhf4A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "94987259147-arftan38e5983j3gfje3g2pa8rcmchbq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

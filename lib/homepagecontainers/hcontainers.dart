@@ -1,7 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:serphantsid/camera.dart';
+import 'package:serphantsid/upload.dart';
 import 'package:serphantsid/spashscreen.dart/spashscreen1.dart';
 
 class hcontainers extends StatelessWidget {
@@ -23,7 +23,7 @@ class hcontainers extends StatelessWidget {
         if (txt=="Upload") {
 
           Navigator.of(context).push(MaterialPageRoute(builder:(context) {
-            return camera();
+            return upload();
           },));
           
         }else if(txt=="Snap"){
