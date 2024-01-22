@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:serphantsid/conbination.dart';
 import 'package:serphantsid/details_container.dart';
 import 'package:serphantsid/homepagecontainers/hcontainers.dart';
 import 'package:serphantsid/serphantscontainers.dart/scontainers.dart';
@@ -17,6 +18,9 @@ class homepage extends StatefulWidget {
 }
 
 class _homepageState extends State<homepage> {
+
+    int _currentIndex = 0;//for bottom navigation bar
+
 
 final serphantsid=FirebaseFirestore.instance.collection("SerphantID").snapshots();
 
@@ -227,7 +231,10 @@ child: Stack(
                  ),
                   BottomNavigationBarItem(
                   icon: IconButton(icon: const Icon(Icons.interests_outlined,size: 25,), onPressed: () {
-        
+                    Navigator.of(context).push(MaterialPageRoute(builder:(context) {
+                      return conbination();
+
+                    },));
                      
         
                   }),
