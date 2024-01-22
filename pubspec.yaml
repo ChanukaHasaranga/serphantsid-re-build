@@ -94,6 +94,7 @@ flutter:
     - assetss/unsplash1.png
     - assetss/background3.png
     - assetss/GettyImages.png
+    - assetss/2.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
