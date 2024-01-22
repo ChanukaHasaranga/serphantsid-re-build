@@ -93,6 +93,7 @@ flutter:
     - assetss/snakemain.png
     - assetss/unsplash1.png
     - assetss/background3.png
+    - assetss/GettyImages.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

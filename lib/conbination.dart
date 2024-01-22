@@ -35,6 +35,7 @@ body: SafeArea(
           height: 234,
           width: double.infinity,
           decoration: BoxDecoration(
+            image: DecorationImage(image:AssetImage("assetss/GettyImages.png"),fit: BoxFit.cover),
             borderRadius: BorderRadius.circular(13),
             border: Border.all(color: Colors.white,width: 1.3),
 
@@ -42,11 +43,15 @@ body: SafeArea(
          ),
        ),
         Positioned(
-          right: 50,
+          right: 68,
+          top: 246,
           child: Container(
+            child: Center(child: Text("Venomous Snakes",style: TextStyle(fontSize: 20,color: Colors.white,fontFamily: "Poppins"),)),
         height: 45,
         width: 261,
         decoration: BoxDecoration(
+
+          border: Border.all(color:Colors.white,width: 1.3),
           borderRadius: BorderRadius.circular(23),
           color: const Color.fromARGB(255, 23, 67, 24)
         ),
