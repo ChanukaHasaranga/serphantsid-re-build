@@ -41,9 +41,7 @@ class detailspage extends StatelessWidget {
                 image: DecorationImage(image:NetworkImage(secondimagepath),fit: BoxFit.cover)
               ),
               child: IconButton(onPressed:() {
-                Navigator.of(context).push(MaterialPageRoute(builder:(context) {
-                  return homepage();
-                },));
+                Navigator.pop(context);
                 
               }, icon: Icon(Icons.arrow_back,size: 30,color: Colors.white,),alignment: Alignment.topLeft,),
             ),

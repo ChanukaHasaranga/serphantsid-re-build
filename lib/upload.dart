@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 
 class upload extends StatefulWidget {
   const upload({super.key});
@@ -8,6 +11,8 @@ class upload extends StatefulWidget {
 }
 
 class _uploadState extends State<upload> {
+
+  File ? _selectedimage;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,6 +51,31 @@ backgroundColor: Color.fromARGB(255, 56, 124, 7),
                   padding: const EdgeInsets.only(top: 15),
                   child: GestureDetector(
                     onTap: () {
+
+                      showDialog(
+                        
+                        context: context, 
+                        
+                        builder:(context) => AlertDialog(
+                          
+                          actions: [
+                            TextButton(
+                              
+                              onPressed:() {
+                                Navigator.of(context).pop();
+                              }, 
+                              
+                              
+                              child: Text("close")
+                              )
+                          ],
+                          title: Text("Upload Image"),
+                          content: _selectedimage !=null ? Image.file(_selectedimage!):Text("please Select the image"),
+                        ),
+                        
+                        
+                        );
+                        pickimagefromgallery();
                       
                     },
                     child: Container(
@@ -71,5 +101,18 @@ backgroundColor: Color.fromARGB(255, 56, 124, 7),
      
      ),
     );
+  }
+  Future pickimagefromgallery() async{
+
+    final returnedimage=await ImagePicker().pickImage(source:ImageSource.gallery);
+
+if (returnedimage==null) {
+  return;
+}
+    setState(() {
+      _selectedimage=File(returnedimage!.path);
+
+    });
+
   }
 }

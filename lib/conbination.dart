@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:serphantsid/bottomnavigationbar.dart';
+import 'package:serphantsid/categoriespage.dart';
 
 class conbination extends StatelessWidget {
   const conbination({super.key});
@@ -33,7 +34,9 @@ body: SafeArea(
          padding: const EdgeInsets.fromLTRB(18, 40, 18, 0),
          child: GestureDetector(
           onTap: () {
-            
+            Navigator.of(context).push(MaterialPageRoute(builder:(context) {
+              return categories();
+            },));
           },
            child: Container(
             height: 234,

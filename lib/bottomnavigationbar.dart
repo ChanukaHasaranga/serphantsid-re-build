@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:serphantsid/conbination.dart';
 import 'package:serphantsid/homepage.dart';
+import 'package:serphantsid/searchpage.dart';
 
 class bottomnavigator extends StatelessWidget {
 
@@ -43,6 +44,9 @@ class bottomnavigator extends StatelessWidget {
                
                 BottomNavigationBarItem(
                   icon: IconButton(icon: const Icon(Icons.search,size: 25,), onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(builder:(context) {
+                      return searchpage();
+                    },));
                   }),
                   label:"",
                 ),

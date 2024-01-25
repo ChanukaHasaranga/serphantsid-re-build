@@ -1,6 +1,8 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:serphantsid/camerapage.dart';
+import 'package:serphantsid/searchpage.dart';
 import 'package:serphantsid/upload.dart';
 import 'package:serphantsid/spashscreen.dart/spashscreen1.dart';
 
@@ -27,7 +29,19 @@ class hcontainers extends StatelessWidget {
           },));
           
         }else if(txt=="Snap"){
+           Navigator.of(context).push(MaterialPageRoute(builder:(context) {
+            return camerapage();
+          },));
           
+          
+        }else{
+
+ Navigator.of(context).push(MaterialPageRoute(builder:(context) {
+            return searchpage();
+          },));
+          
+
+
         }
         
       },
