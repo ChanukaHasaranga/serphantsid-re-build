@@ -17,7 +17,7 @@ String txt;
       
     child: Container(
       margin: EdgeInsets.all(1),
-      height: 200,
+      height: 500,
       
       width: 164,
 
