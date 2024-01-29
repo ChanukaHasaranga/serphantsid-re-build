@@ -43,14 +43,23 @@ mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Padding(
           padding: const EdgeInsets.only(top: 30),
-          child: Text("Categories",style: TextStyle(color: Colors.green,fontFamily: "Poppins"),),
+          child: Text("Categories",style: TextStyle(color: const Color.fromARGB(255, 23, 74, 25),fontFamily: "Poppins",fontSize: 23),),
         ),
 
         Padding(
           padding: const EdgeInsets.fromLTRB(15, 20, 15, 0),
           child: Container(
             
-            child: TabBar(tabs:mytab),
+            child: TabBar(
+              indicatorWeight:2,
+              indicatorPadding: EdgeInsets.symmetric(horizontal: 10),
+              indicator:BoxDecoration(
+                borderRadius: BorderRadius.circular(13),
+                color: Color.fromARGB(107, 24, 100, 3)
+                
+              ),
+              
+              tabs:mytab),
           ),
         ),
         Padding(
