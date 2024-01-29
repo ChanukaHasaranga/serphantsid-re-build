@@ -3,6 +3,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:tflite_v2/tflite_v2.dart';
 
 class camerapage extends StatefulWidget {
   const camerapage({super.key});
@@ -13,6 +14,79 @@ class camerapage extends StatefulWidget {
 
 class _camerapageState extends State<camerapage> {
   File ? _selectedimage;
+
+var _recognitions;
+  var v = "";
+
+void initState(){
+
+super.initState();
+loadmodel().then((value){
+
+setState(() {
+  
+});
+
+
+}
+
+
+
+
+);
+
+
+}
+
+loadmodel() async{
+
+  await Tflite.loadModel(
+    
+    model:"assetss/model_unquant.tflite",
+    labels: "assetss/labels.txt"
+    
+    
+    
+    );
+
+  print("Model loaded successfully!");
+
+}
+
+classifyimage(File selectedimage) async{
+
+var output=await Tflite.runModelOnImage(
+  
+  path: selectedimage.path,
+  numResults: 2,
+  threshold: 0.5,
+  imageMean: 127.5,
+  imageStd: 127.5
+  
+  
+  
+  );
+
+  setState(() {
+_recognitions=output;
+    v = _recognitions.map((recognition) => recognition['label']).join(", ");
+
+  });
+print(_recognitions);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,7 +132,16 @@ body: SafeArea(
                 blurRadius: 2,
               )]
             ),
-            child: _selectedimage!=null ? Image.file(_selectedimage!,fit: BoxFit.cover,):Center(child: Text("Please capture the image")),
+            child:_selectedimage!=null ? Image.file(_selectedimage!,fit: BoxFit.cover,):Center(child: Text("Please capture the image")),
+
+
+
+
+
+
+          
+            
+            
           ),
         ),
 
@@ -73,7 +156,9 @@ body: SafeArea(
               boxShadow: [BoxShadow(
                 blurRadius:2
               )]
+              
             ),
+            child: Center(child: Text(v,style: TextStyle(fontSize: 23,color: const Color.fromARGB(255, 18, 52, 19),fontWeight: FontWeight.bold))),
           ),
         )
       ],
@@ -92,6 +177,9 @@ if (returendimage==null) {
     setState(() {
       _selectedimage=File(returendimage!.path);
     });
+
+    classifyimage(_selectedimage!);
+
 
   }
 }

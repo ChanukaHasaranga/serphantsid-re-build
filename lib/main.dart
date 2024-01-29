@@ -4,7 +4,6 @@ import 'package:serphantsid/firebase_options.dart';
 import 'package:serphantsid/loadingpage.dart';
 
 
-
 void main() async{
 WidgetsFlutterBinding.ensureInitialized();
 

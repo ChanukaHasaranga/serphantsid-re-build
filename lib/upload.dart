@@ -1,7 +1,9 @@
 import 'dart:io';
+import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:tflite_v2/tflite_v2.dart';
 
 class upload extends StatefulWidget {
   const upload({super.key});
@@ -10,9 +12,74 @@ class upload extends StatefulWidget {
   State<upload> createState() => _uploadState();
 }
 
+
+
 class _uploadState extends State<upload> {
 
+
   File ? _selectedimage;
+  var _recognitions;
+  var v = "";
+
+void initState(){
+
+super.initState();
+loadmodel().then((value){
+
+setState(() {
+  
+});
+
+
+}
+
+
+
+
+);
+
+
+}
+
+loadmodel() async{
+
+  await Tflite.loadModel(
+    
+    model:"assetss/model_unquant.tflite",
+    labels: "assetss/labels.txt"
+    
+    
+    
+    );
+
+  print("Model loaded successfully!");
+
+}
+
+classifyimage(File selectedimage) async{
+
+var output=await Tflite.runModelOnImage(
+  
+  path: selectedimage.path,
+  numResults: 2,
+  threshold: 0.5,
+  imageMean: 127.5,
+  imageStd: 127.5
+  
+  
+  
+  );
+
+  setState(() {
+_recognitions=output;
+    v = _recognitions.map((recognition) => recognition['label']).join(", ");
+
+  });
+print(_recognitions);
+}
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,7 +118,6 @@ backgroundColor: Color.fromARGB(255, 56, 124, 7),
                   padding: const EdgeInsets.only(top: 15),
                   child: GestureDetector(
                     onTap: () {
-
                       showDialog(
                         
                         context: context, 
@@ -69,12 +135,17 @@ backgroundColor: Color.fromARGB(255, 56, 124, 7),
                               child: Text("close")
                               )
                           ],
-                          title: Text("Upload Image"),
+                          
+                          title: Text(
+    (v),
+  ),
                           content: _selectedimage !=null ? Image.file(_selectedimage!):Text("please Select the image"),
                         ),
                         
                         
                         );
+
+                        
                         pickimagefromgallery();
                       
                     },
@@ -113,6 +184,8 @@ if (returnedimage==null) {
       _selectedimage=File(returnedimage!.path);
 
     });
+
+classifyimage(_selectedimage!);
 
   }
 }
